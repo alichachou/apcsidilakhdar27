@@ -1,9 +1,14 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = 'https://ukspmsqilttlxbjsesdz.supabase.co'
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVrc3Btc3FpbHR0bHhianNlc2R6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMwODExMzksImV4cCI6MjA2ODY1NzEzOX0.qYKQvP0badE6ou7GTnmsdv---2UjIWDw5w9MvgDxulA'
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://ukspmsqilttlxbjsesdz.supabase.co'
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVrc3Btc3FpbHR0bHhianNlc2R6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMwODExMzksImV4cCI6MjA2ODY1NzEzOX0.qYKQvP0badE6ou7GTnmsdv---2UjIWDw5w9MvgDxulA'
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    autoRefreshToken: false,
+    persistSession: false
+  }
+})
 
 // Database operations for messages
 export const messageService = {
