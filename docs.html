@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوثائق المطلوبة - بلدية سيدي لخضر</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="docs-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> 045.44.71.88</span>
+                    <span><i class="fas fa-fax"></i> 045.44.71.90/91/92</span>
+                    <span><i class="fas fa-envelope"></i> apcsidilakhdar@gmail.com</span>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="public/image.png" alt="شعار البلدية">
+                    <div class="logo-text">
+                        <h1>بلدية سيدي لخضر</h1>
+                        <p>ولاية مستغانم</p>
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="index.html#about" class="nav-link">عن البلدية</a></li>
+                    <li><a href="index.html#council" class="nav-link"><i class="fas fa-users"></i> أعضاء المجلس</a></li>
+                    <li><a href="docs.html" class="nav-link active">الوثائق المطلوبة</a></li>
+                    <li><a href="index.html#news" class="nav-link">الأخبار</a></li>
+                    <li><a href="index.html#projects" class="nav-link">المشاريع</a></li>
+                    <li><a href="index.html#contact" class="nav-link">اتصل بنا</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>الوثائق المطلوبة</h1>
+                <p>دليل شامل للوثائق والمستندات المطلوبة لجميع الخدمات الإدارية</p>
+                <div class="breadcrumb">
+                    <a href="index.html">الرئيسية</a>
+                    <span><i class="fas fa-chevron-left"></i></span>
+                    <span>الوثائق المطلوبة</span>
+                </div>
+                
+                <!-- Documents Dropdown -->
+                <div class="documents-dropdown">
+                    <button class="dropdown-btn" id="documentsDropdown">
+                        <span>اختر نوع الوثيقة</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="dropdownContent">
+                        <a href="#" data-document="birth-certificate">
+                            <i class="fas fa-certificate"></i>
+                            <span>شهادة الميلاد</span>
+                        </a>
+                        <a href="#" data-document="death-certificate">
+                            <i class="fas fa-file-alt"></i>
+                            <span>شهادة الوفاة</span>
+                        </a>
+                        <a href="#" data-document="residence-certificate">
+                            <i class="fas fa-home"></i>
+                            <span>شهادة الإقامة</span>
+                        </a>
+                        <a href="#" data-document="biometric-id">
+                            <i class="fas fa-id-card"></i>
+                            <span>بطاقة التعريف البيومترية</span>
+                        </a>
+                        <a href="#" data-document="passport">
+                            <i class="fas fa-passport"></i>
+                            <span>جواز السفر البيومتري</span>
+                        </a>
+                        <a href="#" data-document="building-permit">
+                            <i class="fas fa-hammer"></i>
+                            <span>رخصة البناء</span>
+                        </a>
+                        <a href="#" data-document="conformity-certificate">
+                            <i class="fas fa-check-circle"></i>
+                            <span>شهادة المطابقة</span>
+                        </a>
+                        <a href="#" data-document="document-authentication">
+                            <i class="fas fa-stamp"></i>
+                            <span>تصديق الوثائق</span>
+                        </a>
+                        <a href="#" data-document="marriage-file">
+                            <i class="fas fa-heart"></i>
+                            <span>ملف الزواج</span>
+                        </a>
+                        <a href="#" data-document="military-service">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>ملف الخدمة الوطنية</span>
+                        </a>
+                        <a href="#" data-document="social-integration">
+                            <i class="fas fa-users"></i>
+                            <span>الإدماج الاجتماعي</span>
+                        </a>
+                        <a href="#" data-document="elderly-allowance">
+                            <i class="fas fa-user-clock"></i>
+                            <span>منحة المسنين</span>
+                        </a>
+                        <a href="#" data-document="biometric-photo">
+                            <i class="fas fa-camera"></i>
+                            <span>معايير الصورة البيومترية</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section class="documents-section">
+        <div class="container">
+            <div class="documents-grid">
+                
+                <!-- Birth Certificate -->
+                <div id="birth-certificate" class="document-section">
+                    <div class="document-category">
+                        <div class="category-header">
+                            <i class="fas fa-certificate"></i>
+                            <h2>شهادة الميلاد</h2>
+                        </div>
+                        <div class="document-item">
+                            <h3>شهادة الميلاد</h3>
+                            <div class="document-content">
+                                <h4>الوثائق المطلوبة:</h4>
+                                <ul>
+                                    <li>طلب خطي من المعني أو أحد أفراد العائلة</li>
+                                    <li>نسخة من بطاقة التعريف الوطنية للطالب</li>
+                                    <li>وثيقة تثبت صلة القرابة (في حالة الطلب من طرف الغير)</li>
+                                </ul>
+                                <div class="document-info">
+                                    <span class="fee">مجاني</span>
+                                    <span class="duration">فوري</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Death Certificate -->
+                <div id="death-certificate" class="document-section">
+                    <div class="document-category">
+                        <div class="category-header">
+                            <i class="fas fa-file-alt"></i>
+                            <h2>شهادة الوفاة</h2>
+                        </div>
+                        <div class="document-item">
+                            <h3>شهادة الوفاة</h3>
+                            <div class="document-content">
+                                <h4>الوثائق المطلوبة:</h4>
+                                <ul>
+                                    <li>طلب خطي من أحد أفراد العائلة</li>
+                                    <li>نسخة من بطاقة التعريف الوطنية للطالب</li>
+                                    <li>وثيقة تثبت صلة القرابة بالمتوفى</li>
+                                    <li>شهادة طبية بالوفاة (إن وجدت)</li>
+                                </ul>
+                                <div class="document-info">
+                                    <span class="fee">مجاني</span>
+                                    <span class="duration">فوري</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Residence Certificate -->
+                <div id="residence-certificate" class="document-section">
+                    <div class="document-category">
+                        <div class="category-header">
+                            <i class="fas fa-home"></i>
+                            <h2>شهادة الإقامة</h2>
+                        </div>
+                        <div class="document-item">
+                            <h3>شهادة الإقامة</h3>
+                            <div class="document-content">
+                                <h4>الوثائق المطلوبة:</h4>
+                                <ul>
+                                    <li>طلب خطي من المعني</li>
+                                    <li>نسخة من بطاقة التعريف الوطنية</li>
+                                    <li>وثيقة تثبت السكن (عقد إيجار، فاتورة كهرباء، ماء، غاز)</li>
+                                    <li>شاهدان من نفس الحي</li>
+                                </ul>
+                                <div class="document-info">
+                                    <span class="fee">مجاني</span>
+                                    <span class="duration">24 ساعة</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Biometric ID Card -->
+                <div id="biometric-id" class="document-section">
+                    <div class="document-category">
+                        <div class="category-header">
+                            <i class="fas fa-id-card"></i>
+                            <h2>بطاقة التعريف الوطنية البيومترية</h2>
+                        </div>
+                        <div class="document-item">
+                            <h3>بطاقة التعريف الوطنية البيومترية</h3>
+                            <div class="document-content">
+                                <h4>للحصول على بطاقة جديدة:</h4>
+                                <ul>
+                                    <li>استمارة طلب بطاقة التعريف الوطنية مملوءة ومؤرخة وموقعة</li>
+                                    <li>شهادة ميلاد أصلية</li>
+                                    <li>شهادة إقامة</li>
+                                    <li>أربع (04) صور شمسية حديثة ومطابقة للمعايير البيومترية</li>
+                                    <li>شهادة الجنسية الجزائرية (للمولودين خارج التراب الوطني)</li>
+                                </ul>
+                                
+                                <h4>لتجديد البطاقة:</h4>
+                                <ul>
+                                    <li>البطاقة القديمة</li>
+                                    <li>استمارة طلب التجديد</li>
+                                    <li>أربع (04) صور شمسية حديثة</li>
+                                    <li>شهادة إقامة</li>
+                                </ul>
+                                
+                                <h4>في حالة الضياع أو السرقة:</h4>
+                                <ul>
+                                    <li>تصريح بالضياع أو السرقة من الشرطة أو الدرك</li>
+                                    <li>جميع الوثائق المطلوبة للحصول على بطاقة جديدة</li>
+                                </ul>
+                                
+                                <div class="document-info">
+                                    <span class="fee">200 دج</span>
+                                    <span class="duration">15 يوم عمل</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Passport -->
+                <div id="passport" class="document-section">
+                    <div class="document-category">
+                        <div class="category-header">
+                            <i class="fas fa-passport"></i>
+                            <h2>جواز السفر البيومتري</h2>
+                        </div>
+                        <div class="document-item">
+                            <h3>جواز السفر البيومتري</h3>
+                            <div class="document-content">
+                                <h4>للحصول على جواز سفر جديد:</h4>
+                                <ul>
+                                    <li>استمارة طلب جواز السفر مملوءة ومؤرخة وموقعة</li>
+                                    <li>بطاقة التعريف الوطنية البيومترية</li>
+                                    <li>شهادة ميلاد أصلية</li>
+                                    <li>شهادة إقامة</li>
+                                    <li>أربع (04) صور شمسية حديثة ومطابقة للمعايير البيومترية</li>
+                                    <li>شهادة الجنسية الجزائرية (للمولودين خارج التراب الوطني)</li>
+                                </ul>
+                                
+                                <h4>لتجديد جواز السفر:</h4>
+                                <ul>
+                                    <li>جواز السفر القديم</li>
+                                    <li>استمارة طلب التجديد</li>
+                                    <li>بطاقة التعريف الوطنية البيومترية</li>
+                                    <li>أربع (04) صور شمسية حديثة</li>
+                                    <li>شهادة إقامة</li>
+                                </ul>
+                                
+                                <h4>للقاصرين (أقل من 18 سنة):</h4>
+                                <ul>
+                                    <li>جميع الوثائق المذكورة أعلاه</li>
+                                    <li>موافقة خطية من الوالدين أو الوصي القانوني</li>
+                                    <li>حضور أحد الوالدين أو الوصي القانوني</li>
+                                    <li>بطاقة التعريف للوالد أو الوصي</li>
+                                </ul>
+                                
+                                <h4>في حالة الضياع أو السرقة:</h4>
+                                <ul>
+                                    <li>تصريح بالضياع أو السرقة من الشرطة أو الدرك</li>
+                                    <li>جميع الوثائق المطلوبة للحصول على جواز سفر جديد</li>
+                                    <li>رسوم إضافية للتعويض</li>
+                                </ul>
+                                
+                                <div class="document-info">
+                                    <span class="fee">6000 دج</span>
+                                    <span class="duration">21 يوم عمل</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Building Permit -->
+                <div id="building-permit" class="document-section">
+                    <div class="document-category">
+                        <div class="category-header">
+                            <i class="fas fa-hammer"></i>
+                            <h2>رخصة البناء</h2>
+                        </div>
+                        <div class="document-item">
+                            <h3>رخصة البناء</h3>
+                            <div class="document-content">
+                                <h4>الوثائق المطلوبة:</h4>
+                                <ul>
+                                    <li>طلب خطي من المالك</li>
+                                    <li>نسخة من بطاقة التعريف الوطنية</li>
+                                    <li>عقد الملكية أو شهادة الحيازة</li>
+                                    <li>مخطط الموقع والموضع</li>
+                                    <li>المخططات المعمارية والتقنية</li>
+                                    <li>دراسة تقنية للمشروع</li>
+                                    <li>شهادة المطابقة مع قوانين التعمير</li>
+                                </ul>
+                                <div class="document-info">
+                                    <span class="fee">حسب المساحة</span>
+                                    <span class="duration">45 يوم</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conformity Certificate -->
+                <div id="conformity-certificate" class="document-section">
+                    <div class="document-category">
+                        <div class="category-header">
+                            <i class="fas fa-check-circle"></i>
+                            <h2>شهادة المطابقة</h2>
+                        </div>
+                        <div class="document-item">
+                            <h3>شهادة المطابقة</h3>
+                            <div class="document-content">
+                                <h4>الوثائق المطلوبة:</h4>
+                                <ul>
+                                    <li>طلب خطي من المالك</li>
+                                    <li>نسخة من رخصة البناء</li>
+                                    <li>نسخة من بطاقة التعريف الوطنية</li>
+                                    <li>عقد الملكية</li>
+                                    <li>تقرير المهندس المعماري</li>
+                                    <li>شهادة إنجاز الأشغال</li>
+                                </ul>
+                                <div class="document-info">
+                                    <span class="fee">حسب المساحة</span>
+                                    <span class="duration">30 يوم</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document Authentication -->
+                <div id="document-authentication" class="document-section">
+                    <div class="document-category">
+                        <div class="category-header">
+                            <i class="fas fa-stamp"></i>
+                            <h2>تصديق الوثائق</h2>
+                        </div>
+                        <div class="document-item">
+                            <h3>تصديق الوثائق</h3>
+                            <div class="document-content">
+                                <h4>الوثائق المطلوبة:</h4>
+                                <ul>
+                                    <li>الوثيقة الأصلية المراد تصديقها</li>
+                                    <li>نسخة من بطاقة التعريف الوطنية للطالب</li>
+                                    <li>طلب خطي (في بعض الحالات)</li>
+                                </ul>
+                                <h4>أنواع الوثائق القابلة للتصديق:</h4>
+                                <ul>
+                                    <li>الشهادات الدراسية</li>
+                                    <li>عقود العمل</li>
+                                    <li>الوثائق الإدارية</li>
+                                    <li>العقود والاتفاقيات</li>
+                                </ul>
+                                <div class="document-info">
+                                    <span class="fee">مجاني</span>
+                                    <span class="duration">فوري</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Marriage File -->
+                <div id="marriage-file" class="document-section">
+                    <div class="document-category">
+                        <div class="category-header">
+                            <i class="fas fa-heart"></i>
+                            <h2>ملف الزواج</h2>
+                        </div>
+                        <div class="document-item">
+                            <h3>ملف الزواج</h3>
+                            <div class="document-content">
+                                <h4>الوثائق المطلوبة للعريس والعروس:</h4>
+                                <ul>
+                                    <li>شهادة ميلاد أصلية (أقل من 3 أشهر)</li>
+                                    <li>شهادة إقامة</li>
+                                    <li>نسخة من بطاقة التعريف الوطنية</li>
+                                    <li>شهادة طبية (أقل من 3 أشهر)</li>
+                                    <li>شهادة عدم الزواج</li>
+                                    <li>موافقة الولي (للعروس)</li>
+                                </ul>
+                                <h4>وثائق إضافية:</h4>
+                                <ul>
+                                    <li>شاهدان بالغان عاقلان</li>
+                                    <li>عقد الزواج الشرعي (إن وجد)</li>
+                                </ul>
+                                <div class="document-info">
+                                    <span class="fee">مجاني</span>
+                                    <span class="duration">7 أيام</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Military Service -->
+                <div id="military-service" class="document-section">
+                    <div class="document-category">
+                        <div class="category-header">
+                            <i class="fas fa-shield-alt"></i>
+                            <h2>ملف الخدمة الوطنية</h2>
+                        </div>
+                        <div class="document-item">
+                            <h3>ملف الخدمة الوطنية</h3>
+                            <div class="document-content">
+                                <h4>الوثائق المطلوبة:</h4>
+                                <ul>
+                                    <li>شهادة ميلاد أصلية</li>
+                                    <li>نسخة من بطاقة التعريف الوطنية</li>
+                                    <li>شهادة إقامة</li>
+                                    <li>شهادة مدرسية أو مهنية</li>
+                                    <li>شهادة طبية للياقة</li>
+                                    <li>صورتان شمسيتان</li>
+                                </ul>
+                                <h4>الشروط:</h4>
+                                <ul>
+                                    <li>العمر: 19-30 سنة</li>
+                                    <li>الجنسية الجزائرية</li>
+                                    <li>اللياقة البدنية والذهنية</li>
+                                </ul>
+                                <div class="document-info">
+                                    <span class="fee">مجاني</span>
+                                    <span class="duration">15 يوم</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Integration -->
+                <div id="social-integration" class="document-section">
+                    <div class="document-category">
+                        <div class="category-header">
+                            <i class="fas fa-users"></i>
+                            <h2>الإدماج الاجتماعي</h2>
+                        </div>
+                        <div class="document-item">
+                            <h3>الإدماج الاجتماعي</h3>
+                            <div class="document-content">
+                                <h4>الوثائق المطلوبة:</h4>
+                                <ul>
+                                    <li>شهادة ميلاد</li>
+                                    <li>نسخة من بطاقة التعريف الوطنية</li>
+                                    <li>شهادة إقامة</li>
+                                    <li>شهادة عدم العمل</li>
+                                    <li>شهادة الدخل (إن وجد)</li>
+                                    <li>شهادة طبية (للحالات الخاصة)</li>
+                                </ul>
+                                <h4>المستفيدون:</h4>
+                                <ul>
+                                    <li>العاطلون عن العمل</li>
+                                    <li>ذوو الاحتياجات الخاصة</li>
+                                    <li>الأرامل والمطلقات</li>
+                                    <li>كبار السن المحتاجون</li>
+                                </ul>
+                                <div class="document-info">
+                                    <span class="fee">مجاني</span>
+                                    <span class="duration">30 يوم</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elderly Allowance -->
+                <div id="elderly-allowance" class="document-section">
+                    <div class="document-category">
+                        <div class="category-header">
+                            <i class="fas fa-user-clock"></i>
+                            <h2>منحة المسنين</h2>
+                        </div>
+                        <div class="document-item">
+                            <h3>منحة المسنين</h3>
+                            <div class="document-content">
+                                <h4>الوثائق المطلوبة:</h4>
+                                <ul>
+                                    <li>شهادة ميلاد</li>
+                                    <li>صورة طبق الأصل لبطاقة التعريف الوطنية</li>
+                                    <li>صورتان شمسيتان</li>
+                                    <li>بطاقة إقامة</li>
+                                </ul>
+                                <h4>الشروط الأساسية:</h4>
+                                <ul>
+                                    <li>العمر: 60 سنة فما فوق</li>
+                                    <li>الجنسية الجزائرية</li>
+                                    <li>عدم التمتع بمعاش تقاعد</li>
+                                    <li>الدخل المحدود أو المعدوم</li>
+                                    <li>عدم وجود معيل</li>
+                                </ul>
+                                <h4>المستفيدون:</h4>
+                                <ul>
+                                    <li>المسنون بدون دخل</li>
+                                    <li>غير المتقاعدين</li>
+                                    <li>المحتاجون اجتماعياً</li>
+                                    <li>المقيمون بصفة دائمة</li>
+                                </ul>
+                                <div class="document-info">
+                                    <span class="fee">مجاني</span>
+                                    <span class="duration">30 يوم عمل</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Biometric Photo Standards -->
+                <div id="biometric-photo" class="document-section">
+                    <div class="document-category">
+                        <div class="category-header">
+                            <i class="fas fa-camera"></i>
+                            <h2>معايير الصورة البيومترية</h2>
+                        </div>
+                        <div class="document-item">
+                            <h3>معايير الصورة البيومترية</h3>
+                            <div class="document-content">
+                                <h4>المواصفات الأساسية:</h4>
+                                <ul>
+                                    <li>يجب أن تكون الصورة حديثة ومماثلة تماماً</li>
+                                </ul>
+                                
+                                <h4>الخلفية:</h4>
+                                <ul>
+                                    <li>يجب أن تكون خلفية الصورة بدون إطار، موحدة وبيضاء</li>
+                                </ul>
+                                
+                                <h4>حجم الصورة:</h4>
+                                <ul>
+                                    <li>يجب أن يكون مقياس الصورة 35 ملم عرض على 45 ملم طول</li>
+                                    <li>يجب أن يكون قياس الوجه من 32 إلى 36 ملم (70 إلى 80% من حجم الصورة)</li>
+                                </ul>
+                                
+                                <h4>جودة الصورة:</h4>
+                                <ul>
+                                    <li>يجب أن تكون صافية بدون بقع أو علامات</li>
+                                </ul>
+                                
+                                <h4>الإضاءة والألوان:</h4>
+                                <ul>
+                                    <li>يجب أن تكون الصورة بدون آثار للأضواء العاكسة (فلاش)</li>
+                                    <li>أن تعكس بوضوح اللون الطبيعي للبشرة</li>
+                                    <li>بدون ظلال على الوجه وعلى خلفية الصورة</li>
+                                </ul>
+                                
+                                <h4>وضعية الرأس:</h4>
+                                <ul>
+                                    <li>يجب أن يكون الرأس غير مغطى وفي وضعية مستقيمة</li>
+                                    <li>أن تكون العينان في اتجاه آلة التصوير</li>
+                                </ul>
+                                
+                                <h4>النظرة وتعابير الوجه:</h4>
+                                <ul>
+                                    <li>يجب أن تكون ملامح الوجه بارزة والفم مغلق (بدون ابتسامة)</li>
+                                </ul>
+                                
+                                <h4>الوجه والعينان:</h4>
+                                <ul>
+                                    <li>يجب أن تكون ملامح الوجه بارزة والعينان واضحتان وبارزتان</li>
+                                </ul>
+                                
+                                <h4>النظارات:</h4>
+                                <ul>
+                                    <li>إرتداء النظارات ليس إجبارياً</li>
+                                    <li>إطار النظارة لا يجب أن يكون خشناً</li>
+                                    <li>أن لا يحجب العينين</li>
+                                    <li>يجب أن يكون الزجاج شفافاً (غير ملون)</li>
+                                    <li>يجب أن لا يكون انعكاس للضوء على زجاج النظارات</li>
+                                </ul>
+                                
+                                <div style="margin-top: 30px; padding: 20px; background: linear-gradient(135deg, #2c5aa0, #1e3d6f); border-radius: 10px;">
+                                    <a href="https://passeport.interieur.gov.dz/Ar/Telechargement/Normes_des_photographies.pdf" 
+                                       target="_blank" 
+                                       style="display: flex; align-items: center; gap: 15px; color: white; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s;">
+                                        <i class="fas fa-download" style="font-size: 24px;"></i>
+                                        <div>
+                                            <div>تحميل دليل معايير الصورة البيومترية الرسمي</div>
+                                            <div style="font-size: 12px; opacity: 0.8; margin-top: 5px;">ملف PDF من وزارة الداخلية الجزائرية</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                                <div class="document-info">
+                                    <span class="fee">50-100 دج</span>
+                                    <span class="duration">فوري</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Notes -->
+    <section class="important-notes">
+        <div class="container">
+            <div class="notes-header">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h2>ملاحظات مهمة</h2>
+            </div>
+            <div class="notes-content">
+                <div class="note-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>أوقات العمل</h4>
+                        <p>الأحد إلى الخميس من 8:00 صباحاً إلى 16:00 مساءً</p>
+                        <p>الأحد إلى الخميس من 8:00 صباحاً إلى 16:30 مساءً</p>
+                    </div>
+                </div>
+                <div class="note-item">
+                    <i class="fas fa-file-alt"></i>
+                    <div>
+                        <h4>صحة الوثائق</h4>
+                        <p>يجب أن تكون جميع الوثائق أصلية وسارية المفعول</p>
+                    </div>
+                </div>
+                <div class="note-item">
+                    <i class="fas fa-user"></i>
+                    <div>
+                        <h4>الحضور الشخصي</h4>
+                        <p>بعض الخدمات تتطلب الحضور الشخصي للمعني</p>
+                    </div>
+                </div>
+                <div class="note-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>للاستفسار</h4>
+                        <p>يمكنكم الاتصال بنا على الرقم: 045.44.71.88</p>
+                        <p>أو إرسال فاكس على: 045.44.71.90/91/92</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="public/image.png" alt="شعار البلدية">
+                        <div>
+                            <h3>بلدية سيدي لخضر</h3>
+                            <p>ولاية مستغانم</p>
+                        </div>
+                    </div>
+                    <p>نعمل من أجل خدمة المواطنين وتطوير المنطقة لتحقيق مستقبل أفضل للجميع.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="index.html#about">عن البلدية</a></li>
+                        <li><a href="council.html">أعضاء المجلس</a></li>
+                        <li><a href="docs.html">الوثائق المطلوبة</a></li>
+                        <li><a href="index.html#news">الأخبار</a></li>
+                        <li><a href="index.html#projects">المشاريع</a></li>
+                        <li><a href="index.html#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>الخدمات</h3>
+                    <ul>
+                        <li><a href="#">بطاقة التعريف</a></li>
+                        <li><a href="#">جواز السفر</a></li>
+                        <li><a href="#">شهادة الميلاد</a></li>
+                        <li><a href="#">شهادة الإقامة</a></li>
+                        <li><a href="#">رخصة البناء</a></li>
+                        <li><a href="#">الرخص التجارية</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>معلومات الاتصال</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> مقر بلدية سيدي لخضر، ولاية مستغانم</p>
+                        <p><i class="fas fa-phone"></i> 045.44.71.88</p>
+                        <p><i class="fas fa-fax"></i> 045.44.71.90/91/92</p>
+                        <p><i class="fas fa-envelope"></i> apcsidilakhdar@gmail.com</p>
+                        <p><i class="fas fa-clock"></i> الأحد - الخميس: 8:00 صباحاً - 16:30 مساءً</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 بلدية سيدي لخضر - مستغانم. جميع الحقوق محفوظة.</p>
+                <p>Created by: ALI CHACHOU</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (hamburger && navMenu) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+
+        // Documents Dropdown
+        const dropdownBtn = document.getElementById('documentsDropdown');
+        const dropdownContent = document.getElementById('dropdownContent');
+        const documentSections = document.querySelectorAll('.document-section');
+
+        if (dropdownBtn && dropdownContent) {
+            dropdownBtn.addEventListener('click', () => {
+                dropdownContent.classList.toggle('show');
+                const icon = dropdownBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+                }
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!dropdownBtn.contains(e.target) && !dropdownContent.contains(e.target)) {
+                    dropdownContent.classList.remove('show');
+                    const icon = dropdownBtn.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    }
+                }
+            });
+
+            // Handle document selection
+            dropdownContent.addEventListener('click', (e) => {
+                e.preventDefault();
+                const link = e.target.closest('a');
+                if (link) {
+                    const documentType = link.getAttribute('data-document');
+                    const selectedText = link.querySelector('span').textContent;
+                    
+                    // Update dropdown button text
+                    dropdownBtn.querySelector('span').textContent = selectedText;
+                    
+                    // Hide all sections
+                    documentSections.forEach(section => {
+                        section.classList.remove('active');
+                    });
+                    
+                    // Show selected section
+                    const targetSection = document.getElementById(documentType);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                        
+                        // Scroll to the section
+                        setTimeout(() => {
+                            targetSection.scrollIntoView({ 
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }, 100);
+                    }
+                    
+                    // Close dropdown
+                    dropdownContent.classList.remove('show');
+                    const icon = dropdownBtn.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    }
+                }
+            });
+        }
+
+        // Show first document by default
+        if (documentSections.length > 0) {
+            documentSections[0].classList.add('active');
+        }
+    </script>
+</body>
+</html>
