@@ -1,4 +1,28 @@
 <!DOCTYPE html>
+<style>
+  .details-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .details-content.open {
+    max-height: 500px;
+  }
+
+  .detail-btn {
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .member-info {
+    direction: rtl;
+    text-align: right;
+  }
+</style>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -432,45 +456,6 @@
     <script src="script.js" type="module"></script>
 </body>
 </html>
-<style>
-  .details-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-  }
-
-  .details-content.open {
-    max-height: 500px;
-  }
-
-  .detail-btn {
-    cursor: pointer;
-    color: #007bff;
-    text-decoration: underline;
-    display: inline-block;
-    margin-top: 10px;
-  }
-
-  .member-info {
-    direction: rtl;
-    text-align: right;
-  }
-</style>
-
-<div class="member-info">
-  <h3>بوغازي منصور</h3>
-  <p class="member-title">رئيس المجلس الشعبي البلدي</p>
-
-  <div class="member-details">
-    <span class="detail-btn" onclick="toggleDetails(this)">عرض التفاصيل...</span>
-
-    <div class="details-content">
-      <p><strong>الخبرة:</strong> له عهدة سابقة كعضو في المجلس، ومدير ابتدائية لأكثر من 10 سنوات.</p>
-      <p><strong>رقم الهاتف:</strong> 0775 16 23 08</p>
-    </div>
-  </div>
-</div>
-
 <script>
   function toggleDetails(button) {
     const content = button.nextElementSibling;
