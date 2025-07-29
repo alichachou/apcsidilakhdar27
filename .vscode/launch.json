@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open index.html",
+            "file": "d:\\APC\\موقع واب بلدية سيدي لخضر\\Bolt\\My Final Wbesite APC SL 24-07\\project-bolt-sb1-xjwlss46 24-07-2025\\project\\index.html"
+        }
+    ]
+}
