@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم الإدارية - بلدية سيدي لخضر</title>
+    <link rel="stylesheet" href="admin-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-container">
+            <div class="login-header">
+                <img src="public/image.png" alt="شعار البلدية">
+                <h1>لوحة التحكم الإدارية</h1>
+                <p>بلدية سيدي لخضر - مستغانم</p>
+            </div>
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="username">اسم المستخدم</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">كلمة المرور</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="login-btn">تسجيل الدخول</button>
+                <div id="loginError" class="error-message" style="display: none;">
+                    اسم المستخدم أو كلمة المرور غير صحيحة
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="adminDashboard" class="admin-dashboard" style="display: none;">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="public/image.png" alt="شعار البلدية">
+                    <div>
+                        <h2>لوحة التحكم الإدارية</h2>
+                        <p>بلدية سيدي لخضر</p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <span class="admin-name">مرحباً، المدير</span>
+                    <button id="logoutBtn" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item active">
+                        <a href="#messages" class="nav-link" data-section="messages">
+                            <i class="fas fa-envelope"></i>
+                            <span>الرسائل</span>
+                            <span id="unreadCount" class="badge">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#statistics" class="nav-link" data-section="statistics">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>الإحصائيات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#settings" class="nav-link" data-section="settings">
+                            <i class="fas fa-cog"></i>
+                            <span>الإعدادات</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Messages Section -->
+            <section id="messagesSection" class="content-section active">
+                <div class="section-header">
+                    <h2>إدارة الرسائل</h2>
+                    <div class="header-actions">
+                        <select id="filterStatus" class="filter-select">
+                            <option value="all">جميع الرسائل</option>
+                            <option value="unread">غير مقروءة</option>
+                            <option value="read">مقروءة</option>
+                            <option value="replied">تم الرد عليها</option>
+                        </select>
+                        <button id="refreshMessages" class="refresh-btn">
+                            <i class="fas fa-sync-alt"></i> تحديث
+                        </button>
+                    </div>
+                </div>
+
+                <div class="messages-container">
+                    <div class="messages-list">
+                        <div id="messagesList" class="messages-grid">
+                            <!-- Messages will be loaded here -->
+                        </div>
+                    </div>
+
+                    <div class="message-details" id="messageDetails" style="display: none;">
+                        <div class="message-header">
+                            <button id="closeMessage" class="close-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            <h3>تفاصيل الرسالة</h3>
+                        </div>
+                        <div class="message-content">
+                            <div class="message-info">
+                                <div class="info-item">
+                                    <label>الاسم:</label>
+                                    <span id="messageName"></span>
+                                </div>
+                                <div class="info-item">
+                                    <label>البريد الإلكتروني:</label>
+                                    <span id="messageEmail"></span>
+                                </div>
+                                <div class="info-item">
+                                    <label>الهاتف:</label>
+                                    <span id="messagePhone"></span>
+                                </div>
+                                <div class="info-item">
+                                    <label>نوع الاستفسار:</label>
+                                    <span id="messageType"></span>
+                                </div>
+                                <div class="info-item">
+                                    <label>التاريخ:</label>
+                                    <span id="messageDate"></span>
+                                </div>
+                            </div>
+                            <div class="message-text">
+                                <label>الرسالة:</label>
+                                <div id="messageBody"></div>
+                            </div>
+                            <div class="reply-section">
+                                <h4>الرد على الرسالة</h4>
+                                <form id="replyForm">
+                                    <textarea id="replyText" placeholder="اكتب ردك هنا..." rows="5" required></textarea>
+                                    <div class="reply-actions">
+                                        <button type="submit" class="reply-btn">
+                                            <i class="fas fa-paper-plane"></i> إرسال الرد
+                                        </button>
+                                        <button type="button" id="markAsRead" class="mark-read-btn">
+                                            <i class="fas fa-check"></i> تحديد كمقروءة
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Statistics Section -->
+            <section id="statisticsSection" class="content-section">
+                <div class="section-header">
+                    <h2>الإحصائيات</h2>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalMessages">0</h3>
+                            <p>إجمالي الرسائل</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-envelope-open"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="unreadMessages">0</h3>
+                            <p>رسائل غير مقروءة</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-reply"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="repliedMessages">0</h3>
+                            <p>تم الرد عليها</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-day"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="todayMessages">0</h3>
+                            <p>رسائل اليوم</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settingsSection" class="content-section">
+                <div class="section-header">
+                    <h2>الإعدادات</h2>
+                </div>
+                <div class="settings-container">
+                    <div class="settings-card">
+                        <h3>إعدادات الحساب</h3>
+                        <form id="accountSettings">
+                            <div class="form-group">
+                                <label>اسم المستخدم</label>
+                                <input type="text" value="admin" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>كلمة المرور الجديدة</label>
+                                <input type="password" id="newPassword">
+                            </div>
+                            <div class="form-group">
+                                <label>تأكيد كلمة المرور</label>
+                                <input type="password" id="confirmPassword">
+                            </div>
+                            <button type="submit" class="save-btn">حفظ التغييرات</button>
+                        </form>
+                    </div>
+                    <div class="settings-card">
+                        <h3>إعدادات الإشعارات</h3>
+                        <div class="setting-item">
+                            <label class="switch">
+                                <input type="checkbox" id="emailNotifications" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span>إشعارات البريد الإلكتروني</span>
+                        </div>
+                        <div class="setting-item">
+                            <label class="switch">
+                                <input type="checkbox" id="soundNotifications" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span>الإشعارات الصوتية</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="fas fa-check-circle"></i>
+                <h3>تم بنجاح</h3>
+            </div>
+            <div class="modal-body">
+                <p id="successMessage">تم إرسال الرد بنجاح</p>
+            </div>
+            <div class="modal-footer">
+                <button id="closeSuccessModal" class="modal-btn">موافق</button>
+            </div>
+        </div>
+    </div>
+
+    <div style="position: fixed; bottom: 10px; left: 10px; background: rgba(0,0,0,0.7); color: white; padding: 5px 10px; border-radius: 5px; font-size: 12px; z-index: 9999;">
+        Created by: ALI CHACHOU
+    </div>
+
+    <script src="admin-script.js" type="module"></script>
+</body>
+</html>
